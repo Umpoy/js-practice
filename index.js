@@ -1,19 +1,19 @@
-// Challenge
-// Using the JavaScript language, have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. 
-// For example: if the input string is "Hello World and Coders" then your program should return the string sredoC dna dlroW olleH. 
+//Challenge
+//Using the JavaScript language, have the function FirstFactorial(num) take the num parameter being passed and return the factorial of it (e.g. if num = 4, return (4 * 3 * 2 * 1)). For the test cases, the range will be between 1 and 18 and the input will always be an integer. 
 
-// Sample Test Cases
-// Input:"coderbyte"
-// Output:"etybredoc"
-// Input:"I Love Code"
-// Output:"edoC evoL I"
+//Sample Test Cases
+//Input:4
+//Output:24
+//Input:8
+//Output:40320
 
-console.log(FirstReverse("coderbyte"));
-console.log(FirstReverse("I Love Code"));
+console.log(FirstFactorial(4));
+console.log(FirstFactorial(8));
 
-function FirstReverse(str) {
-    let split = str.split('');
-    let reverse = split.reverse();
-    let join = reverse.join('');
-    return join;
+function FirstFactorial(num) {
+    if (num == 0) {
+        return 1
+    } else {
+        return num * FirstFactorial(num - 1);
+    }
 }
